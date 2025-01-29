@@ -19,8 +19,8 @@ def extract_file_content(path: str) -> list:
     Args:
         path: string containing file path
     """
-    loader_text = TextLoader(path)
-    loader_content = loader_text.load()
+    file = open(path)
+    loader_content = file.readlines()
     for line in loader_content:
         print(line)
 
